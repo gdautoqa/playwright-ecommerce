@@ -1,0 +1,19 @@
+# Node modules
+node_modules/
+
+# Playwright test results
+playwright-report/
+test-results/
+
+# VSCode
+.vscode/
+.history/
+.env
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Trashes
+ehthumbs.db
+Thumbs.db
