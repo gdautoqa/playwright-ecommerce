@@ -1,5 +1,5 @@
 import { test, expect, devices } from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage.page';
+import { LoginPage } from '../pages/loginPage';
 
 const deviceConfigurations = [
   { name: 'iPhone 13', viewport: devices['iPhone 13'].viewport },

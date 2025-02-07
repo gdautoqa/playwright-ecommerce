@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage.page';
+import { LoginPage } from '../pages/loginPage';
 import { USERNAMES } from '../data/credentials';
-import { CheckoutPage } from '../pages/CheckoutPage.page';
+import { CheckoutPage } from '../pages/checkoutPage';
 
 test.describe('Error User Form Tests', () => {
   test('should verify form errors', async ({ page }) => {
