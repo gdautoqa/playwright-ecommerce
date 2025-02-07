@@ -105,6 +105,8 @@ This repository contains a comprehensive Playwright test suite designed to valid
   Execute the following command to run all Playwright tests:
   ```
   npm test
+  or
+  npx playwright test
   ```
   
 - **Lint and Format Code**  
@@ -121,15 +123,15 @@ This repository contains a comprehensive Playwright test suite designed to valid
     npm run format
     ```
 
-- **Type Checking**  
-  To ensure TypeScript types are correct:
-  ```
-  npm run tsc
-  ```
-
 ---
 
 ## Environment Variables
 
 - The tests use environment variables (e.g., `SAUCE_PASSWORD`) loaded via dotenv.
 - Create a `.env` file with the necessary key-value pairs for login credentials.
+
+## Continuous Integration
+
+This project uses GitHub Actions to run Playwright tests:
+- **Triggers:** Pushes, pull requests to `main`, every Tuesday at 7 am Eastern (11 am UTC), and manual dispatch via the Actions tab.
+- **Secrets:** The SauceDemo password is stored as a GitHub secret (`SAUCE_PASSWORD`) and used during testing.
