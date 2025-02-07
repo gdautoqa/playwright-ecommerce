@@ -1,5 +1,5 @@
 import { test, expect } from '../fixtures/auth.fixture';
-import { InventoryPage } from '../pages/InventoryPage.page';
+import { InventoryPage } from '../pages/inventoryPage';
 
 test.describe('Cart Item Count Tests', () => {
   test('should update the cart badge count when items are added or removed', async ({ loggedInPage }) => {

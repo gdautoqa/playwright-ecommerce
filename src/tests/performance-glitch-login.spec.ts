@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage.page';
+import { LoginPage } from '../pages/loginPage';
 import { USERNAMES } from '../data/credentials';
 
 test.describe('Performance Glitch User Tests', () => {

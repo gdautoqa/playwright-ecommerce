@@ -1,7 +1,7 @@
 import { test as base, expect, Page } from '@playwright/test';
 import { test as authTest } from '../fixtures/auth.fixture';
-import { LoginPage } from '../pages/LoginPage.page';
-import { CheckoutPage } from '../pages/CheckoutPage.page';
+import { LoginPage } from '../pages/loginPage';
+import { CheckoutPage } from '../pages/checkoutPage';
 
 base.describe('Negative Flow Tests', () => {
   base('should not login with invalid credentials', async ({ page }: { page: Page }) => {

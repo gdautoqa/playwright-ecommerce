@@ -1,5 +1,5 @@
 import { test, expect } from '../fixtures/auth.fixture';
-import { InventoryPage } from '../pages/InventoryPage.page';
+import { InventoryPage } from '../pages/inventoryPage';
 
 test.describe('Back to Products Functionality Tests', () => {
   test('should navigate back to the inventory page when clicking "Back to Products"', async ({ loggedInPage }) => {

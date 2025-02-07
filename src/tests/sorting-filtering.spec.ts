@@ -1,5 +1,5 @@
 import { test, expect } from '../fixtures/auth.fixture';
-import { InventoryPage } from '../pages/InventoryPage.page';
+import { InventoryPage } from '../pages/inventoryPage';
 
 test.describe('Sorting and Filtering Tests', () => {
   test('should sort products by price high to low', async ({ loggedInPage }) => {

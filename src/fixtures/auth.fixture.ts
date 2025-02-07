@@ -1,6 +1,6 @@
 import { test as base, Page } from '@playwright/test';
 import dotenv from 'dotenv';
-import { LoginPage } from '../pages/LoginPage.page';
+import { LoginPage } from '../pages/loginPage';
 import { SAUCE_PASSWORD } from '../data/credentials';
 
 // Load environment variables (if not already loaded)

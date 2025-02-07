@@ -1,5 +1,5 @@
 import { test, expect } from '../fixtures/auth.fixture';
-import { InventoryPage } from '../pages/InventoryPage.page';
+import { InventoryPage } from '../pages/inventoryPage';
 
 test.describe('Product Details Tests', () => {
   test('should display product details correctly', async ({ loggedInPage }) => {

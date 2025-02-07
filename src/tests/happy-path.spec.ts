@@ -1,7 +1,7 @@
 import { test, expect } from '../fixtures/auth.fixture';
-import { InventoryPage } from '../pages/InventoryPage.page';
-import { CartPage } from '../pages/CartPage.page';
-import { CheckoutPage } from '../pages/CheckoutPage.page';
+import { InventoryPage } from '../pages/inventoryPage';
+import { CartPage } from '../pages/cartPage';
+import { CheckoutPage } from '../pages/checkoutPage';
 
 test.describe('Happy Path Tests', () => {
   test('should complete purchase flow successfully', async ({ loggedInPage }) => {

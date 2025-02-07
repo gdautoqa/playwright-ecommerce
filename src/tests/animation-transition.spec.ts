@@ -1,5 +1,5 @@
 import { test, expect } from '../fixtures/auth.fixture';
-import { MenuComponent } from '../pages/MenuComponent.page';
+import { MenuComponent } from '../pages/menuComponentPage';
 
 test.describe('Animation and Transition Tests', () => {
   test('menu should transition smoothly', async ({ loggedInPage }) => {
