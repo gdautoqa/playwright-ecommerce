@@ -54,28 +54,29 @@ This repository contains a comprehensive Playwright test suite for the SauceDemo
 
 ## Continuous Integration & Local Testing
 
-- **GitHub Actions:**  
-  - **Triggers:**  
-    - On pushes and pull requests to `main`  
-    - On a scheduled basis: every Tuesday at 7 am Eastern (11 am UTC)  
+- **GitHub Actions:**
+
+  - **Triggers:**
+    - On pushes and pull requests to `main`
+    - On a scheduled basis: every Tuesday at 7 am Eastern (11 am UTC)
     - Manually via the Actions tab
   - **Browsers:** Tests run on Chromium, Firefox, WebKit, Pixel 8, and iPhone 15.
   - **Secrets:** The SauceDemo password is stored as a GitHub secret.
 
 - **Local Testing Commands:**
-  - Run tests:  
+  - Run tests:
     ```
     npm test
     ```
-  - Lint code:  
+  - Lint code:
     ```
     npm run lint
     ```
-  - Auto-fix lint issues:  
+  - Auto-fix lint issues:
     ```
     npm run lint:fix
     ```
-  - Format code:  
+  - Format code:
     ```
     npm run format
     ```

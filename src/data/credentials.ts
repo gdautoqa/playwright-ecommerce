@@ -14,11 +14,13 @@ export const USERNAMES = {
   PROBLEM: 'problem_user',
   PERFORMANCE_GLITCH: 'performance_glitch_user',
   ERROR: 'error_user',
-  VISUAL: 'visual_user'
+  VISUAL: 'visual_user',
 } as const;
 
 // Export SAUCE_PASSWORD from .env
 export const SAUCE_PASSWORD = process.env.SAUCE_PASSWORD;
 if (!SAUCE_PASSWORD) {
-  throw new Error('SAUCE_PASSWORD is not defined in the environment variables.');
+  throw new Error(
+    'SAUCE_PASSWORD is not defined in the environment variables.',
+  );
 }
