@@ -9,7 +9,7 @@ on:
       - main
   workflow_dispatch:
   schedule:
-    - cron: '0 11 * * 2'  # Runs every Tuesday at 7am Eastern (EDT) (11am UTC)
+    - cron: '0 11 * * 2' # Runs every Tuesday at 7am Eastern (EDT) (11am UTC)
 
 jobs:
   test:
