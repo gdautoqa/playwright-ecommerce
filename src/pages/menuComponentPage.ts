@@ -7,7 +7,7 @@ export class MenuComponent {
 
   constructor(page: Page) {
     this.page = page;
-    this.menuButton = page.locator('#react-burger-menu-btn');
+    this.menuButton = page.getByRole('button', { name: 'Open Menu' });
     this.menuContainer = page.locator('.bm-menu-wrap');
   }
 

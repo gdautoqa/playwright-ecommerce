@@ -5,7 +5,7 @@ import { USERNAMES, SAUCE_PASSWORD } from '../data/credentials';
 test.describe('SauceDemo Login Tests', () => {
   for (const username of Object.values(USERNAMES)) {
     test(`should attempt login with ${username}`, async ({ page }) => {
-      // Navigate to the SauceDemo base URL
+      // Navigate to the base URL
       await page.goto('/');
 
       const loginPage = new LoginPage(page);

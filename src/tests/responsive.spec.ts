@@ -10,12 +10,14 @@ const deviceConfigurations = [
 
 test.describe('Responsive Design Tests', () => {
   for (const device of deviceConfigurations) {
-    test(`should display inventory correctly on ${device.name}`, async ({ page }) => {
+    test(`should display inventory correctly on ${device.name}`, async ({
+      page,
+    }) => {
       await page.setViewportSize(device.viewport);
       await page.goto('/');
       const loginPage = new LoginPage(page);
       await loginPage.login('standard_user', process.env.SAUCE_PASSWORD!);
-      await expect(page.locator('[data-test="inventory-container"]')).toBeVisible();
+      await expect(page.getByTestId('inventory-container')).toBeVisible();
     });
   }
 });

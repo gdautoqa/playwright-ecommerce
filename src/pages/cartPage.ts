@@ -7,12 +7,12 @@ export class CartPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.checkoutButton = page.locator('[data-test="checkout"]');
-    this.continueShoppingButton = page.locator('[data-test="continue-shopping"]');
+    this.checkoutButton = page.getByTestId('checkout');
+    this.continueShoppingButton = page.getByTestId('continue-shopping');
   }
 
   async removeItem(productName: string): Promise<void> {
-    await this.page.locator(`[data-test="remove-${productName}"]`).click();
+    await this.page.getByTestId(`remove-${productName}`).click();
   }
 
   async continueShopping(): Promise<void> {

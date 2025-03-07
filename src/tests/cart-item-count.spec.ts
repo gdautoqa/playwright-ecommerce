@@ -2,11 +2,12 @@ import { test, expect } from '../fixtures/auth.fixture';
 import { InventoryPage } from '../pages/inventoryPage';
 
 test.describe('Cart Item Count Tests', () => {
-  test('should update the cart badge count when items are added or removed', async ({ loggedInPage }) => {
+  test('should update the cart badge count when items are added or removed', async ({
+    loggedInPage,
+  }) => {
     const page = loggedInPage;
     const inventoryPage = new InventoryPage(page);
 
-    // Initially, the cart badge should not be visible.
     const cartBadge = page.locator('[data-test="shopping-cart-badge"]');
     await expect(cartBadge).toHaveCount(0);
 
