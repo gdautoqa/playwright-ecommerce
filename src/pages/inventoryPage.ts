@@ -10,23 +10,23 @@ export class InventoryPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.backToProductsButton = page.locator('[data-test="back-to-products"]');
-    this.sortDropdown = page.locator('[data-test="product-sort-container"]');
-    this.cartLink = page.locator('[data-test="shopping-cart-link"]');
+    this.backToProductsButton = page.getByTestId('back-to-products');
+    this.sortDropdown = page.getByTestId('product-sort-container');
+    this.cartLink = page.getByTestId('shopping-cart-link');
     this.productImages = page.locator('.inventory_item_img');
-    this.inventoryContainer = page.locator('#inventory_container');
+    this.inventoryContainer = page.getByTestId('inventory-container');
   }
 
   async clickProductTitle(itemNumber: string): Promise<void> {
-    await this.page.locator(`[data-test="item-${itemNumber}-title-link"]`).click();
+    await this.page.getByTestId(`item-${itemNumber}-title-link`).click();
   }
 
   async addToCart(productName: string): Promise<void> {
-    await this.page.locator(`[data-test="add-to-cart-${productName}"]`).click();
+    await this.page.getByTestId(`add-to-cart-${productName}`).click();
   }
 
   async removeFromCart(productName: string): Promise<void> {
-    await this.page.locator(`[data-test="remove-${productName}"]`).click();
+    await this.page.getByTestId(`remove-${productName}`).click();
   }
 
   async sortProducts(option: string): Promise<void> {

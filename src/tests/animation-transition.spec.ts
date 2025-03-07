@@ -7,11 +7,13 @@ test.describe('Animation and Transition Tests', () => {
     const menuComponent = new MenuComponent(page);
     await menuComponent.openMenu();
 
-    await expect.poll(async () => {
-      const opacity = await page.locator('.bm-menu-wrap').evaluate(el =>
-        parseFloat(window.getComputedStyle(el).opacity)
-      );
-      return opacity;
-    }).toBeGreaterThan(0);
+    await expect
+      .poll(async () => {
+        const opacity = await page
+          .locator('.bm-menu-wrap')
+          .evaluate((el) => parseFloat(window.getComputedStyle(el).opacity));
+        return opacity;
+      })
+      .toBeGreaterThan(0);
   });
 });

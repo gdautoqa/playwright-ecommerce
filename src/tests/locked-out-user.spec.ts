@@ -11,11 +11,13 @@ test.describe('SauceDemo Locked Out User Tests', () => {
     await page.goto('/');
 
     const loginPage = new LoginPage(page);
-    
+
     // Login with locked_out_user and the password from the .env file
     await loginPage.login('locked_out_user', process.env.SAUCE_PASSWORD!);
 
     // Assert that the error message is displayed
-    await expect(loginPage.errorMessage).toHaveText('Epic sadface: Sorry, this user has been locked out.');
+    await expect(loginPage.errorMessage).toHaveText(
+      'Epic sadface: Sorry, this user has been locked out.',
+    );
   });
 });
